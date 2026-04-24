@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+        #contenedor{
+            width: 400px;
+            height: 200px;
+            background-color: black;
+            border: 1px solid black;
+            position: relative; /* contenedor padre */
+            margin: 0 auto; /* centrar contenedor */
+            overflow: hidden; /* oculta los elementos que salen del contenedor */
+            z-index: 0;
+        }
+        #cuadrito{
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            position: absolute;
+            right: -100;
+            top: 50;
+            animation: cuadrito 3s infinite;
+            animation-timing-function: linear; 
+            transform: rotate(-90deg);
+            z-index: 2;
+        }
+        #cuadrito img{
+            width: 100px;
+            height: 100px;
+        }
+         @keyframes cuadrito {
+            from{
+                right: -100;
+            }
+            to{
+               right: 500;
+            }
+        }
+
+        #cohete{
+            animation: coheteanim 1s infinite alternate;
+            animation-timing-function: linear;
+            z-index: 2;
+        }
+        @keyframes coheteanim {
+            0% {
+            transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(-10deg);
+            }    
+        }
+        
+        .particulabase{
+            width: 3px;
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            left: -103;
+            animation-timing-function: linear;
+            z-index: 1;
+        }
+        #partic1{
+            margin-top: 15;
+            animation: partic01 3s infinite;
+            animation-timing-function: linear; 
+        }
+        @keyframes partic01 {
+            from{
+                margin-top: 15;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        #partic2{
+            margin-top: 45;
+            animation: partic02 5s infinite;
+            animation-timing-function: linear; 
+        }
+        @keyframes partic02 {
+            from{
+                margin-top: 45;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        #partic3{
+            margin-top: 90;
+            animation: partic03 9s infinite;
+            animation-timing-function: linear;
+            
+        }
+        @keyframes partic03 {
+            from{
+                margin-top: 90;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        #partic4{
+            margin-top: 110;
+            animation: partic04 6s infinite;
+            animation-timing-function: linear;
+            
+        }
+        @keyframes partic04 {
+            from{
+                margin-top: 110;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        #partic5{
+            margin-top: 140;
+            animation: partic05 2s infinite;
+            animation-timing-function: linear;
+            
+        }
+        @keyframes partic05 {
+            from{
+                margin-top: 140;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        #partic6{
+            margin-top: 190;
+            animation: partic06 7s infinite;
+            animation-timing-function: linear;
+            
+        }
+        @keyframes partic06 {
+            from{
+                margin-top: 190;
+                left: -103;
+            }to{
+                left: 503;
+            }
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="cuadrito">
+                <img src="cohete.gif" alt="" id="cohete">
+            </div>
+            <div id="partic1" class="particulabase"></div>
+            <div id="partic2" class="particulabase"></div>
+            <div id="partic3" class="particulabase"></div>
+            <div id="partic4" class="particulabase"></div>
+            <div id="partic5" class="particulabase"></div>
+            <div id="partic6" class="particulabase"></div>
+        </div>
+    </body>
+</html>
