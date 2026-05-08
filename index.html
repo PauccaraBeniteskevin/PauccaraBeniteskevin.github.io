@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            *{
+                padding:0px;
+                margin:0px;
+            }
+
+            .contenedor{
+                width: 450px;
+                height: 300px;
+                border: 1px solid transparent;
+                margin: 150 auto;
+                position: relative;
+            }
+            .tarjeta1, .tarjeta2, .tarjeta3{
+                width:150px;
+                height:300px;
+                position: absolute;
+                background-size: cover;
+                z-index: -1;
+            }
+            .tarjeta1{
+                background-image: url(img/cgi.jpg);
+                animation: tarjeta1 3s forwards;
+                left: -800px;
+                top: -500px;
+            }
+            .tarjeta2{
+                background-image: url(img/cgi\ css.jpg);
+                animation: tarjeta2 3s forwards;
+                left: 150px;
+                top: 600px;
+            }
+            .tarjeta3{
+                background-image: url(img/cgi\ javascript.jpg);
+                left: 300px;
+                animation: tarjeta3 3s forwards;
+                left: 800px;
+                top: -500px;
+            }
+
+                
+            
+
+            @keyframes tarjeta1 {
+                0%{
+                transform: rotate(360deg);
+                
+                }100%{
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+            @keyframes tarjeta2 {
+                0%{
+                    transform: rotate(720deg)
+                }100%{
+                    left: px;
+                    top: 0px;
+                }
+            }
+
+            @keyframes tarjeta3 {
+                0%{
+                    transform: rotate(-360deg)
+                }100%{
+                    left: 300px;
+                    top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+            <div class="contenedor">
+                <div class="tarjeta1"></div>
+                <div class="tarjeta2"></div>
+                <div class="tarjeta3"></div>
+                <div class="tarjeta4"></div>
+            </div>
+        
+    </body>
+</html>
