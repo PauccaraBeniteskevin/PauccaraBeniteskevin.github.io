@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@350&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            html {scroll-behavior: smooth;}
+            body {background-color: rgb(50, 50, 50);}
+            #logoseoane {margin-left: 5px; width: 60px;}
+
+            * {
+                font-family: "Oswald", sans-serif;
+                padding: 0;
+                margin: 0;
+                color: white;
+                box-sizing: border-box;
+            }
+
+            .nav {
+                width: 100%;
+                height: 80px;
+                background-color: rgb(221, 155, 50);
+                position: fixed;
+                top: 0px;
+                z-index: 1000;
+            }
+
+            #navelements {
+                position: absolute;
+                margin-left: 1350px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                gap: 40px;
+            }
+
+            #navelements a:hover { color: gold; }
+
+            .footer {
+                position: absolute;
+                width: 100%;
+                height: 80px;
+                background-color: rgb(221, 155, 50);
+                padding: 7px;
+            }
+
+            .main {
+                margin-top: 80px;
+                width: 100%;
+                height: 1000px;
+                background-color: transparent;
+                position: relative;
+            }
+
+            .main #maintit {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 20px;
+                font-size: 40px;
+            }
+
+            .main #maintit2 {
+                position: absolute;
+                left: 50%;
+                transform: translate(-40%);
+                top: 600px;
+                font-size: 50px;
+            }
+
+            /* ── Tarjetas compartidas ── */
+            .main .ejer1,
+            .main .ejer2,
+            .main .ejer3,
+            .main .ejer4,
+            .main .ejer5 {
+                position: absolute;
+                overflow: hidden;
+                width: 600px;
+                height: 200px;
+                margin: 0 auto;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                background-color: black;
+                border-radius: 20px;
+                border: 3px solid rgb(255, 166, 0);
+                transition: all 0.5s ease;
+                cursor: pointer;
+            }
+
+            .main .ejer1:hover,
+            .main .ejer2:hover,
+            .main .ejer3:hover,
+            .main .ejer4:hover,
+            .main .ejer5:hover { scale: 1.1; }
+
+            /* ── Posiciones individuales ── */
+            .main .ejer1 { left: 6.25%;  top: 100px; }
+            .main .ejer2 { left: 56.25%; top: 100px; }
+            .main .ejer3 { left: 6.25%;  top: 350px; }
+            .main .ejer4 { left: 56.25%; top: 350px; }
+            .main .ejer5 { left: 31%;    top: 700px; }
+
+            /* ── Panel de info compartido ── */
+            .ejer1 .info,
+            .ejer2 .info,
+            .ejer3 .info,
+            .ejer4 .info,
+            .ejer5 .info {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background-color: rgb(100, 100, 100);
+            }
+
+            /* ── Título dentro del panel info ── */
+            .ejer1 .info h1,
+            .ejer2 .info h1,
+            .ejer3 .info h1,
+            .ejer4 .info h1,
+            .ejer5 .info h1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%) translateY(-50%);
+                font-size: 20px;
+                white-space: nowrap;
+            }
+
+            /* ── Contenedor de imagen compartido ── */
+            .ejer1 .divimgtablero,
+            .ejer2 .divimgmanuelseoane,
+            .ejer3 .divimgsamaltman,
+            .ejer4 .divimglisa,
+            .ejer5 .divimganim {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background-color: transparent;
+                left: 50%;
+            }
+
+            /* ── Imágenes individuales ── */
+            .ejer1 #imgtablero {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .ejer2 #imgmanuelseoane,
+            .ejer3 #imgsamaltman,
+            .ejer4 #imglisa {
+                position: absolute;
+                width: 200px;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .ejer5 #imganim {
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%) translateY(-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav">
+            <img id="logoseoane" src="../img/logoseoane.png" alt="">
+            <ul id="navelements">
+                <a href="../index.html">Inicio</a>
+                <a href="./index.html">Ver trabajos</a>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <h1 id="maintit">EJERCICIOS DE CLASE</h1>
+
+            <div class="ejer1" onclick="location.href='./ejertablero/tableroaj.html'">
+                <div class="info">
+                    <h1 id="ejer1tit">TABLERO DE AJEDREZ</h1>
+                </div>
+                <div class="divimgtablero">
+                    <img src="./img/tablero.png" id="imgtablero">
+                </div>
+            </div>
+
+            <div class="ejer2" onclick="location.href='./manuelseoane/index.html'">
+                <div class="info">
+                    <h1 id="ejer2tit">MANUEL SEOANE CORRALES <br> ANIMACIÓN DE ENTRADA</h1>
+                </div>
+                <div class="divimgmanuelseoane">
+                    <img src="./img/Manuel_Seoane_Corrales.jpg" id="imgmanuelseoane">
+                </div>
+            </div>
+
+            <div class="ejer3" onclick="location.href='./samaltman/index.html'">
+                <div class="info">
+                    <h1 id="ejer3tit">SAM ALTMAN <br> ANIMACIÓN DE ENTRADA</h1>
+                </div>
+                <div class="divimgsamaltman">
+                    <img src="./img/sam.jpg" id="imgsamaltman">
+                </div>
+            </div>
+
+            <div class="ejer4" onclick="location.href='./lisasu/index.html'">
+                <div class="info">
+                    <h1 id="ejer4tit">LISA SU <br> ANIMACIÓN DE ENTRADA</h1>
+                </div>
+                <div class="divimglisa">
+                    <img src="./img/lisa.jpg" id="imglisa">
+                </div>
+            </div>
+
+            <h1 id="maintit2">PROYECTOS</h1>
+
+            <div class="ejer5" onclick="location.href='./animations/index.html'">
+                <div class="info">
+                    <h1 id="ejer5tit">ANIMACIONES CON MOVIMIENTO <br> UP - DOWN - LEFT - RIGHT</h1>
+                </div>
+                <div class="divimganim">
+                    <img src="./img/anim.png" id="imganim">
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <h3>Sitio desarrollado por: Pauccara Benites Kevin Alberto</h3>
+        </footer>
+    </body>
+</html>
