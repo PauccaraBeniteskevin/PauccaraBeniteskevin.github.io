@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: khaki;
+            }
+            .container{
+                position: relative;
+                width: 100%;
+                height: 703px;
+                background-color: rgb(175, 113, 255);
+            }
+            #titulo{
+                position: absolute;
+                left: 520px;
+                top: -20px;
+                animation: titulo 3s ease infinite forwards ;
+            }
+            #img{
+                position: absolute;
+                left: 620px;
+                top: 70px;
+                animation: img 3s ease infinite forwards;
+            }
+            #p{
+                position: absolute;
+                left: 370px;
+                width: 800px;
+                height: 150px;
+                top: 450px;
+                position: absolute;
+                animation: p 3s ease infinite forwards;
+            }
+            @keyframes p {
+                from{
+                   
+                    opacity: 0;
+                    left: 0px;
+                }to{
+                    left: 370px;
+                     transform: rotate(360deg);
+                }
+            }
+            @keyframes img {
+                from{
+                    opacity: 0;
+                    top: 4px;
+                }to{
+                    top: 70px;
+                }
+            }
+            @keyframes titulo {
+                from{
+                    opacity: 0;
+                    top: -20px;
+                }to{
+                    top: 20px;
+                }   
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"> 
+            <div><h1 id="titulo">MANUEL SEOANE CORRALES</h1></div>
+            <div id="img"><img src="../img/Manuel_Seoane_Corrales.jpg" height="350px"></div><br> 
+            <div id="p">
+                <p>Manuel Seoane Corrales (Chorrillos, 1 de noviembre de 1900-Washington D. C., 10 de septiembre de 1963) fue un abogado,
+                periodista y político peruano, uno de los miembros fundadores del Partido Aprista Peruano. Después de Haya de la
+                Torre, fue el líder aprista que gozó de más popularidad. Apodado “El Cachorro”. Fundador y primer director de La
+                Tribuna, órgano de prensa de su partido. En el seno de su partido desempeñó, entre otros cargos, la Secretaría
+                    General (1940-1948). Padeció de persecuciones y destierros al igual que el resto de sus compañeros apristas.
+                    Fue candidato a la primera vicepresidencia de la República del Perú en plancha presidencial encabezada por
+                    Haya de la Torre en las elecciones generales de 1962, las mismas que fueron anuladas.</p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
