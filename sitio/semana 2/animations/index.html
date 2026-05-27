@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            /*ANIMATION UP*/
+            .contenedorup{
+                left: 12.5%;
+
+                position: relative;
+                width: 500px;
+                height: 300px;
+                background-color: transparent;
+                border: 2px solid black;
+                overflow: hidden;
+            }
+            .cuadritoup{
+                left: 200px;
+                top: -100px;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+                animation: up 2s ease infinite;
+            }
+            @keyframes up {
+                from{
+                    top: -400px;
+                }to{
+                    top: 400px;
+                }
+            }
+            /*ANIMATION DOWM*/
+            .contenedordown{
+                top: -300px;
+                left: 62.5%;
+
+                position: relative;
+                width: 500px;
+                height: 300px;
+                background-color: transparent;
+                border: 2px solid black;
+                overflow: hidden;
+            }
+            .cuadritodown{
+                left: 200px;
+                bottom: -100px;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+                animation: down 2s ease-in-out infinite;
+            }
+            @keyframes down {
+                from{
+                    bottom: -400px;
+                }to{
+                    bottom: 400px;
+                }
+            }
+            /*ANIMATION LEFT*/
+            .contenedorleft{
+                top: -300px;
+                left: 12.5%;
+
+                position: relative;
+                width: 500px;
+                height: 300px;
+                background-color: transparent;
+                border: 2px solid black;
+                overflow: hidden;
+            }
+            .cuadritoleft{
+                top: 100px;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+                animation: leftt 2s ease infinite;
+            }
+            @keyframes leftt {
+                from{
+                    left: -600px;
+                }to{
+                    left: 600px;
+                }
+            }
+            /*ANIMATION RIGHT*/
+            .contenedorright{
+                top: -600px;
+                left: 62.5%;
+
+                position: relative;
+                width: 500px;
+                height: 300px;
+                background-color: transparent;
+                border: 2px solid black;
+                overflow: hidden;
+            }
+            .cuadritoright{
+                top: 100px;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+                animation: rightt 2s ease-in-out infinite;
+            }
+            @keyframes rightt {
+                from{
+                    left: 600px;
+                }to{
+                    left: -600px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedorup"> up
+            <div class="cuadritoup"></div>
+        </div>
+        <div class="contenedordown"> down
+            <div class="cuadritodown"></div>
+        </div>
+        <div class="contenedorleft"> left
+            <div class="cuadritoleft"></div>
+        </div>
+        <div class="contenedorright"> right
+            <div class="cuadritoright"></div>
+        </div>
+    </body>
+</html>
