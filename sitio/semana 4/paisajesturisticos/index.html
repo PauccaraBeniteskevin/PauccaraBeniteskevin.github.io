@@ -1,0 +1,164 @@
+    <html>
+    <head>
+    <title>TURISMO PERÚ</title>
+
+    <style>
+    *{
+        padding:0;
+        margin:0;
+    }
+
+    .contenedor{
+        margin: 0 auto;
+        width:800px;
+        height:300px;
+        border:1px solid black;
+        position:relative;
+        animation-name: cont;
+        animation-delay: 6s;
+        overflow: hidden;
+    }
+
+    .tarjeta5{
+        position: absolute;
+        width:650px;
+        height:50px;
+        background-color: transparent;
+        left: 100px;
+        top: 350px;
+        animation: tarjeta5 3s ease forwards 4s;
+        z-index: 999;
+    }
+    .tarjeta5 h1{
+        font-family: 'Arial Black', 'Impact', 'Franklin Gothic Bold', sans-serif;
+        color: blue;          
+              
+        position: relative;     
+    }
+    @keyframes tarjeta5 {
+            0% {
+            top: 350px;
+            transform: scaleX(1);
+        }
+        20% {
+            transform: scaleX(-1);  /* rotación 1 */
+        }
+        25% {
+            transform: scaleX(1);   /* rotación 2 */
+        }
+        30% {
+            transform: scaleX(-1);
+        }
+        45% {
+            transform: scaleX(1); 
+        }
+        50% {
+            transform: scaleX(-1); 
+        }
+        55% {
+            transform: scaleX(1);  
+        }
+        60% {
+            transform: scaleX(-1);  
+        }
+        65% {
+            transform: scaleX(1);  
+        }
+        70% {
+            transform: scaleX(-1);
+        }
+        75% {
+            transform: scaleX(1);   
+        }
+        100% {
+            top: 200px;
+            
+        }
+    }
+
+    .tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4{
+        width:200px;
+        height:300px;
+        position:absolute;
+        top:-300px;
+        z-index: 1;
+    }
+
+
+    .tarjeta1{
+        left:0;
+        background:url(../img/costa.jpg);
+        background-size:cover;
+        animation: tarjeta 2s forwards;
+    }
+
+    .tarjeta2{
+        left:200px;
+        background:url(../img/selva.jpg);
+        background-size:cover;
+        animation: tarjeta 2s forwards 1s;
+    }
+
+    .tarjeta3{
+        left:400px;
+        background:url(../img/sierra.jpg);
+        background-size:cover;
+        animation: tarjeta 2s forwards 2s;
+    }
+
+    .tarjeta4{
+        left:600px;
+        background:url(../img/mar.jpg);
+        background-size:cover;
+        animation: tarjeta 2s forwards 3s;
+    }
+
+    .tarjeta1:hover,
+    .tarjeta2:hover,
+    .tarjeta3:hover,
+    .tarjeta4:hover{
+        transform:scale(1.2);
+        z-index:10;
+    }
+    @keyframes identifier {
+
+        to{
+            overflow: visible;
+        }
+    }
+
+    @keyframes tarjeta{
+        0%{
+            top:-300px;
+            transform:rotateY(180deg);
+        }
+
+        50%{
+            top:300px;
+        }
+
+        100%{
+            top:0;
+        }
+    }
+    </style>
+    </head>
+
+    <body>
+
+    <div class="wrapper">
+        <div class="contenedor">
+
+            <div class="tarjeta1"></div>
+            <div class="tarjeta2"></div>
+            <div class="tarjeta3"></div>
+            <div class="tarjeta4"></div>
+            <div class="tarjeta5">
+                <h1>DESTINOS TURÍSTICOS DEL PERÚ</h1> 
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+    </html>
