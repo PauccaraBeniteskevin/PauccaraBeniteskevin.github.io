@@ -1,0 +1,107 @@
+<html>
+<head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: black;
+        }
+        #contenedor{
+            width: 400px;
+            height: 200px; 
+            border: 1px solid black;
+            background-color: black;
+            position: relative;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+
+        #cuadrito{
+            position: absolute;
+            width: 50px;
+            height: 50px; 
+            top: 75px;
+            left: 400px;
+
+            animation: mover 4s linear infinite;
+            z-index: 2;
+        }
+
+        #cuadrito img{
+            height: 80px;
+            transform: rotate(-90deg);
+        }
+
+        @keyframes mover{
+            0%{
+                left: 400px;
+            }
+
+            100%{
+                left: -80px;
+            }
+        }
+
+        .particula{
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .p1{
+            top: 20px;
+            animation: estrellas 2s linear infinite;
+        }
+
+        .p2{
+            top: 60px;
+            animation: estrellas 4s linear infinite;
+        }
+
+        .p3{
+            top: 100px;
+            animation: estrellas 3s linear infinite;
+        }
+
+        .p4{
+            top: 150px;
+            animation: estrellas 5s linear infinite;
+        }
+
+        .p5{
+            top: 40px;
+            animation: estrellas 2.5s linear infinite;
+        }
+
+        @keyframes estrellas{
+            0%{
+                left: 420px;
+            }
+
+            100%{
+                left: -20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div class="particula p1"></div>
+        <div class="particula p2"></div>
+        <div class="particula p3"></div>
+        <div class="particula p4"></div>
+        <div class="particula p5"></div>
+        <div id="cuadrito">
+            <img src="../img/coete.png">
+        </div>
+
+    </div>
+
+</body>
+</html>
