@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title></title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    *{
+        margin:10;
+        padding:0;
+    }
+
+    #contenedor{
+        width: 400px;
+        height: 200px; 
+        border: 1px solid black;
+        position:relative;
+        margin:0 auto;
+        overflow: hidden;
+    }
+
+    #cuadrito{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+
+        top:0px;
+        left:-100px;
+
+        animation: cuadrito 2s linear infinite;
+    }
+
+    @keyframes cuadrito{
+
+        
+        0%{
+            left:-100px;
+            top:0px;
+            transform: scaleX(1); /*espejo*/
+        }
+
+        30%{
+            left:400px;
+            top:0px;
+            transform: scaleX(1);
+        }
+
+       
+        33%{
+            left:400px;
+            top:50px;
+            transform: scaleX(-1);
+        }
+
+       
+        63%{
+            left:-100px;
+            top:50px;
+            transform: scaleX(-1);
+        }
+
+       
+        66%{
+            left:-100px;
+            top:100px;
+            transform: scaleX(1);
+        }
+
+       
+        100%{
+            left:400px;
+            top:100px;
+            transform: scaleX(1);
+        }
+    }
+
+    #cuadrito img{
+        width: 100px;
+        height: 100px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <div id="cuadrito">
+
+            <img src="../img/megaman.gif" alt="">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
