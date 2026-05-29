@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@350&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: "Oswald", sans-serif;
+            }
+            .contenedor{
+                position: relative;
+                width: 400px;
+                height: 600px;
+                background-color: black;
+                margin: 0 auto;
+                z-index: 0;
+            }
+            .fondo{
+                position: absolute;
+                width: 100%;
+                height: 450px;
+                background-image: url(./img/fondo.png);
+                opacity: 35%;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); /*80% el fondo*/
+                z-index: 1;
+                overflow: visible;
+            }
+            .franjamujer{
+                position: absolute;
+                width: 100%;
+                height: 300px;
+                background-image: url(./img/mujer.png);
+                background-size: cover;
+                z-index: 2;
+                clip-path: polygon(0 10%, 100% 40%, 100% 100%, 0 70%);
+                filter: sepia(1) saturate(4);
+                opacity: 85%;
+                overflow: visible;
+
+                top: 100px;
+            }
+            .franja2{
+                position: absolute;
+                width: 150px;
+                height: 240px;
+                background-color: rgb(255, 208, 0);
+                z-index: 5; /*  EL Z INDEZ DE VARON SERÁ */
+                left: 30px;
+                clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+
+                top: 320px;
+            }
+            .franja2 #titulo{
+                position: absolute;
+                font-size: 25px;
+                left: 25px;
+                top: 10px;
+                font-family: "Oswald", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+            }
+            .franja2 #p{
+                position: absolute;
+                font-size: 8px;
+                left: 30px;
+                top: 85px;
+            }
+            .franja2 #p2{
+                position: absolute;
+                font-size: 8px;
+                left: 10px;
+                top: 210px;
+            }
+            #p3{
+                position: absolute;
+                font-size: 8px;
+                left: 55px;
+                top: 570px;
+                color: white;
+                z-index: 6;
+            }
+            .varon{
+                position: absolute;
+                z-index: 4;
+                width: 200px;
+                top: 90px;
+                left: 15px;
+            }
+            .tit{
+                position: absolute;
+                font-size: 30px;
+                color: white;
+                left: 250px;
+                top: 50px;
+            }
+            .titamar{
+                position: absolute;
+                font-size: 30px;
+                color: yellow;
+                left: 250px;
+                top: 10px;
+            }
+            .titabajo{
+                position: absolute;
+                font-size: 20px;
+                color: yellow;
+                left: 280px;
+                top: 540px;
+            }
+            .titabajo2{
+                position: absolute;
+                font-size: 20px;
+                color: white;
+                left: 280px;
+                top: 560px;
+            }
+            .textinfo #tit, .textinfo #subt, .textinfo #p {
+                position: absolute;
+                z-index: 90;
+                color: white;
+            }
+            .textinfo #tit{
+                font-size: 20px;
+                left: 230px;
+                top: 430px;
+            }
+            .textinfo #subt{
+                font-size: 10px;
+                left: 270px;
+                top: 460px;
+            }
+            .textinfo #p{
+                font-size: 8px;
+                left: 270px;
+                top: 480px;
+            }
+            .iconoraro, .llamada, .ubi{
+                position: absolute;
+                width: 50px;
+                
+            }
+            .iconoraro{
+                left: 230px;
+                top: 540px;
+            }
+            .llamada{
+                width: 20px;
+                left: 240px;
+                top: 480px;
+            }
+            .ubi{
+                width: 20px;
+                left: 240px;
+                top: 520px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="fondo"></div> 
+            <h1 class="titamar">FITNESS</h1>
+            
+            <h1 class="tit">TRAINING <br>CENTER</h1>
+            <div class="franjamujer"></div>
+            <div class="franja2">
+                <h1 id="titulo">FITNESS <br> PROGRAM</h1> 
+                <p id="p">
+                    • BODYPUMP • PILATES • <br>
+                    • KICKBOXING • TANNING <br>
+                    • FULL LINE OF CARDIOVASC <br>
+                    EQUIPMENT • LIFE FITNESS <br>
+                    EQUIPMENT • FREE WEIGHTS <br>
+                    PERSONAL TRAINING • <br>
+                    NUTRITIONAL PROGRAMS • <br>
+                    GROUP EXERCISE STUDIOS <br>
+                    SAUNA ROOMS • STRENGTH <br>
+                    EQUIPMENT AND MORE 
+                </p> 
+                <h3 id="p2">OPEN DAILY, FROM MONDAY THROUGH <br> SUNDAY, FROM 7 AM TO 9 PM </h3>
+                 
+            </div>
+            <div id="p3">WWW.GYMCENTERWEB.COM.AU</div>
+            <img src="./img/varon.png" class="varon">
+
+            <div class="textinfo">
+                    <h1 id="tit">BOOK TODAY</h1>
+                    <h3 id="subt"> 1800 GYM 781</h3>
+                    <p id="p"> Suite 008/813 Building Country Road
+                        City 2800, United States <br> <br>
+
+                        facebook.com/yourgymtrainercenter
+                        instagram.com/yourgymtrainercenter
+                    </p>
+            </div>
+            <h1 class="titabajo">FITNESS</h1>
+            <h1 class="titabajo2">TRAIN</h1>
+            <img src="./img/iconoraro.png" class="iconoraro">
+            <img src="./img/icontelefono.png" class="llamada">
+            <img src="./img/iconubi.png" class="ubi">
+
+        </div>
+    </body>
+</html>
