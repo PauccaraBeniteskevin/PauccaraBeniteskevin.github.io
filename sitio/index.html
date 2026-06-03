@@ -1,0 +1,489 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@350&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            html {scroll-behavior: smooth;}
+            body {background-color: black;}
+            #logoseoane {margin-left: 5px; width: 60px;}
+
+            * {
+                font-family: "Oswald", sans-serif;
+                padding: 0;
+                margin: 0;
+                color: white;
+                box-sizing: border-box;
+            }
+
+            .nav {
+                width: 100%;
+                height: 80px;
+                background-color: rgb(221, 155, 50);   
+                position: fixed; /*Pega elementos en un lugar fijo del navegador(la posición es la ventana del navegador)*/
+                top: 0px;
+                z-index: 1000;
+            }
+            
+            #navelements {
+                position: absolute;
+                margin-left: 1350px;
+                top: 50%; /* usar top para manipular elementos hijos dentro del contenedor padre */
+                transform: translateY(-50%);
+                display: flex; /*Flex activa gap*/
+                gap: 40px; /*Separación entre elementos*/
+            }
+
+            #navelements a:hover {color: gold;}
+
+            .footer{
+                position: relative;
+                width: 100%;
+                height: 80px;
+                background-color: rgb(221, 155, 50);
+                padding: 7px;
+            }
+
+            .main {
+                margin-top: 80px;
+                width: 100%;
+                height: 625px;
+                background-color: transparent;
+                position: relative;
+                scroll-margin-top: -545px;
+
+                background:
+                radial-gradient(circle at 15% 25%, #ffad66 0%, transparent 45%),
+                radial-gradient(circle at 82% 18%, #e07bff -5%, transparent 38%),
+                radial-gradient(circle at 60% 85%, #b493fc -10%, transparent 25%),
+                #ffe76d;
+                
+                overflow: hidden;   
+            }   
+            .fig1{ /*Cuadrado*/
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: rgb(18, 93, 255);
+                filter: blur(5px);  /* Efecto borroso tipo censura */
+                opacity: 0.7;
+                animation: fig1 180s  alternate;
+
+                left: -150px;
+
+            }
+            @keyframes fig1 { /*Cuadrado*/
+                0%{
+                    left: -150px;
+                    top: 450px;
+                    transform: rotate(0deg);
+                }
+                0.5%{
+                    margin-left: 400px;
+                    top: 350px;
+                    transform: rotate(-120deg);
+                }
+                100%{
+                    margin-left: 2000px;
+                    top: 100px;
+                    transform: rotate(-1240deg);
+                }
+            }
+            .fig2{         /*triangulo*/  
+                width: 0;
+                height: 0;
+                border-left: 60px solid transparent;
+                border-right: 60px solid transparent;
+                border-bottom: 100px solid rgb(255, 0, 0);
+                filter: blur(5px);
+                opacity: 0.7;
+                animation: fig2 155s  alternate;
+
+                left: -150px;
+            }
+            @keyframes fig2 { 
+                0%{
+                    left: -150px;
+                    transform: rotate(0deg);
+                }
+                0.5%{
+                    margin-left: 530px;
+                    margin-top: 70px;
+                    transform: rotate(-120deg);
+                }
+                100%{
+                    margin-left: 2000px;
+                    margin-top: 700px;
+                    transform: rotate(-840deg);
+                }
+            }
+
+            .fig3 {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: rgb(255, 140, 0);
+                border-radius: 50%;
+                filter: blur(6px);
+                opacity: 0.65;
+                animation: fig3 230s  alternate;
+                left: -150px;
+                top: 500px;
+            }
+
+            @keyframes fig3 { /*circulo*/
+                0% {
+                    left: -150px;
+                    top: 600px;
+                    transform: rotate(0deg);
+                }
+                0.3% {
+                    left: 700px;
+                    top: 450px;
+                    transform: rotate(45deg);
+                }
+                100% {
+                    left: 100%;
+                    top: 500px;
+                    transform: rotate(360deg);
+                }
+            }
+            .fig4 {
+                position: absolute;
+                font-size: 100px;
+                color: rgb(255, 215, 0);
+                filter: blur(5px);
+                opacity: 1;
+                animation: fig4 80s  alternate;
+                left: -150px;
+                top: 200px;
+            }
+
+            @keyframes fig4 { /*estrella*/
+                0% {
+                    left: -150px;
+                    top: 430px;
+                    transform: rotate(0deg);
+                }
+                0.6% {
+                    left: 970px;
+                    top: 200px;
+                    transform: rotate(-220deg);
+                }
+                100% {
+                    left: 100%;
+                    top: -00px;
+                    transform: rotate(-1360deg);
+                }
+            }
+            .fig5 {
+                position: absolute;
+                font-size: 100px;
+                color: rgb(50, 200, 100);
+                filter: blur(5px);
+                opacity: 0.7;
+                animation: fig5 170s  alternate;
+                left: -150px;
+                top: 600px;
+            }
+            @keyframes fig5 { /*pentagono*/
+                0% {
+                    left: -150px;
+                    top: 200px;
+                    transform: rotate(0deg);
+                }
+                0.5% {
+                    left: 30px;
+                    top: 150px;
+                    transform: rotate(-120deg);
+                }
+                100% {
+                    left: 100%;
+                    top: -100px;
+                    transform: rotate(-1240deg);
+                }
+            }
+            
+
+            .main #maintit {
+                top: 250px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .main #mainsubt {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 290px;
+            }
+
+            .sectionsemanas {
+                scroll-margin-top: 80px; /*espacio del margen cuando llega al destino*/
+                position: relative;
+                width: 100%;
+                height: 1800px;
+                background-color: rgb(50, 50, 50);
+            }
+
+            .sectionsemanas #titulo {
+                position: absolute;
+                margin-left: 50%;
+                transform: translate(-50%);
+                font-size: 60px;
+                top: 30px;
+            }
+            
+            .main #mainsubt, .main #maintit{
+                animation: animtext 6s infinite alternate;
+            }
+            @keyframes animtext {
+                0%{
+                    color: white;
+                }
+                10%{
+                    color: white;
+                }
+                60%{
+                    color: red;
+                }
+                100%{
+                    color: blue;
+                }
+                
+            }
+            /*   SEMAANAS    */
+
+            .semana2, .semana3, .semana4, .semana5, .semana6, .semana7 {
+                overflow: hidden;
+                width: 300px;
+                height: 400px;
+                background-color: black;
+                position: relative; 
+                
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+                border-radius: 20px;
+                border: 2px solid rgb(255, 166, 0);
+                transition: all 0.5s ease;         
+            }
+            .semana2{
+                left: 10%;
+                top: 170px;
+            }
+            .semana3{
+                left: 40%;
+                top: -230px;
+            }
+            .semana4{
+                left: 70%;
+                top: -630px;
+            }
+            .semana5{
+                left: 10%;
+                top: -570px;
+            }
+            .semana6{
+                left: 40%;
+                top: -970px;
+            }
+            .semana7{
+                left: 70%;
+                top: -1370px;
+            }
+            
+            .semana2:hover{ transform: scale(1.1); }
+            .semana3:hover{ transform: scale(1.1); }
+            .semana4:hover{ transform: scale(1.1); }
+            .semana5:hover{ transform: scale(1.1); }
+            .semana6:hover{ transform: scale(1.1); }
+            .semana7:hover{ transform: scale(1.1); }
+
+            /*Divs de info*/
+            .semana2 #info, .semana3 #info, .semana4 #info, .semana5 #info, .semana6 #info, .semana7 #info {
+                position: absolute;
+                background-color: rgb(100, 100, 100);
+                width: 100%;
+                height: 50%;
+                top: 50%;
+            }
+
+            .semana2 #tit, .semana3 #tit, .semana4 #tit, .semana5 #tit, .semana6 #tit, .semana7 #tit {       
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                font-size: 30px;
+                top: 5px;
+            }
+
+            .semana2 #subtit, .semana3 #subtit, .semana4 #subtit, .semana5 #subtit, .semana6 #subtit, .semana7 #subtit {
+                
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 45px;
+                white-space: nowrap;
+            }
+
+            .semana2 #desc, .semana3 #desc, .semana4 #desc, .semana5 #desc, .semana6 #desc, .semana7 #desc{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 90px;
+                font-size: 15px;
+                white-space: nowrap;
+            }
+
+            .semana2 .divportadasem2, .semana3 .divportadasem3, .semana4 .divportadasem4, .semana5 .divportadasem5, .semana6 .divportadasem6, .semana7 .divportadasem7{
+                position: relative;
+                background-color: transparent;
+                width: 100%;
+                height: 50%;
+                
+            }
+
+            .semana2 #imgportsemana2, .semana3 #imgportsemana3, .semana4 #imgportsemana4, .semana5 #imgportsemana5, .semana6 #imgportsemana6, .semana7 #imgportsemana7{ 
+                position: absolute;
+                height: 100%;
+                width: 350px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%) translateY(-50%);     
+            }
+
+
+            .semana2 #button, .semana3 #button, .semana4 #button, .semana5 #button, .semana6 #button, .semana7 #button{ 
+                position: absolute;
+                width: 100px;
+                left: 50%;
+                transform: translate(-50%);
+                
+                background-color: rgb(100, 100, 100);
+                border: 0.2px solid white;
+                border-radius: 5px;
+                color: white;
+                padding: 7px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                
+                top: 140px;
+            }
+            
+            .semana2 #button:hover {background-color: rgb(75, 75, 75);}
+            .semana3 #button:hover {background-color: rgb(75, 75, 75);}
+            .semana4 #button:hover {background-color: rgb(75, 75, 75);}
+            .semana5 #button:hover {background-color: rgb(75, 75, 75);}
+            .semana6 #button:hover {background-color: rgb(75, 75, 75);}
+            .semana7 #button:hover {background-color: rgb(75, 75, 75);}
+            
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="nav">
+            <img id="logoseoane" src="./img/logoseoane.png" alt="">
+            <ul id="navelements">
+                <a href="./index.html" >Inicio</a>
+                <a href="#main">Ver trabajos</a>
+            </ul>
+        </nav>
+
+    <main id="main" class="main" >
+        <div class="fig1"></div>
+        <div class="fig2"></div>
+
+        <div class="fig3"></div>
+        <div class="fig4">★</div>
+        <div class="fig5">⬟</div>
+
+
+        <div class="fig6"></div>
+        <div class="fig7"></div>
+
+        <h1 id="maintit">ANIMACIÓN DE GRÁFICOS</h1>
+        <h3 id="mainsubt">Portafolio de trabajos</h3>
+    </main>
+
+        <section class="sectionsemanas">
+            <h1 id="titulo">TRABAJOS</h1>
+
+            <div class="semana2">
+                <div id="info">
+                    <h2 id="tit">SEMANA 2 </h2>
+                    <h4 id="subtit">ESTILOS DE ANIMACIONES</h4>
+                    <h4 id="desc">(Tablero ajedrez, biografías, movimiento simple)</h4>
+                    <a href="./semana 2/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem2">
+                    <img src="./img/ports2.png" id="imgportsemana2">
+                </div>
+            </div>
+
+            <div class="semana3">
+                <div id="info">
+                    <h2 id="tit">SEMANA 3 </h2>
+                    <h4 id="subtit">MOVIMIENTO DE DIVS, TIEMPOS DE ANIMACIÓN</h4>
+                    <h4 id="desc">(MEGAMAN, COHETE)</h4>
+                    <a href="./semana 3/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem3">
+                    <img src="./img/portadasem3.png" id="imgportsemana3">
+                </div>
+            </div>
+
+            <div class="semana4">
+                <div id="info">
+                    <h2 id="tit">SEMANA 4 </h2>
+                    <h4 id="subtit">ANIMACIÓN POR PASOS</h4>
+                    <h4 id="desc">(ABEJA, BANNER TURÍSTICO y CGI, PUBLICIDAD)</h4>
+                    <a href="./semana 4/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem4">
+                    <img src="./img/portsem4.png" id="imgportsemana4">
+                </div>
+            </div>
+
+            <div class="semana5">
+                <div id="info">
+                    <h2 id="tit">SEMANA 5 </h2>
+                    <h4 id="subtit">CLIP PATH</h4>
+                    <h4 id="desc">(CLIP PATH PAYASO, CLIP PATH CREATIVO)</h4>
+                    <a href="./semana 5/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem5">
+                    <img src="./img/portadasem5.png" id="imgportsemana5">
+                </div>
+            </div>
+
+            <div class="semana6">
+                <div id="info">
+                    <h2 id="tit">SEMANA 6 </h2>
+                    <h4 id="subtit">EFECTO PARALLAX</h4>
+                    <h4 id="desc">(PARALLAX, CLIP PATH GYM)</h4>
+                    <a href="./semana 6/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem6">
+                    <img src="./semana 6/img/parallax.png" id="imgportsemana6">
+                </div>
+            </div>
+
+            <div class="semana7">
+                <div id="info">
+                    <h2 id="tit">SEMANA 7 </h2>
+                    <h4 id="subtit">ARCHIVOS SVG</h4>
+                    <h4 id="desc">SVG NOMBRE</h4>
+                    <a href="./semana 7/index.html"><button id="button">Ver trabajos</button></a> 
+                </div>
+                <div class="divportadasem7">
+                    <img src="./semana 7/img/svgnombre.png" id="imgportsemana7">
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <h3>Sitio desarrollado por: Pauccara Benites Kevin Alberto</h3>
+        </footer>
+
+    </body>
+</html>
